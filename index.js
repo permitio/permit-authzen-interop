@@ -41,7 +41,7 @@ fastify.post(
 
 // Run the server!
 try {
-  await fastify.listen({ port: process.env.PORT || 3000 });
+  await fastify.listen({ port: process.env.PORT || 3000, host: "0.0.0.0" });
   console.log(`Server listening on ${fastify.server.address().port}`);
 } catch (err) {
   fastify.log.error(err);
