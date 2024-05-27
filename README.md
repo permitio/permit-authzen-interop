@@ -1,5 +1,5 @@
 # Permit AuthZen PDP Gateway
-A simple Fastify server that proxies the Permit.io PDP service into a complaint AuthZen PDP service. The purpose of this project is to demonstrate the support of Permit.io PDP in the AuthZen server (mostly) out of the box.
+A simple Fastify server that proxies the Permit.io PDP service into an AuthZen-compliant PDP service.
 
 ## Usage
 To run this project locally:

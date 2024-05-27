@@ -9,6 +9,10 @@ const permit = new Permit({
   token: process.env.PERMIT_API_KEY,
 });
 
+fastify.get("/", async () => {
+  return { status: "ok" };
+});
+
 fastify.post(
   "/access/v1/evaluation",
   async function handler(
