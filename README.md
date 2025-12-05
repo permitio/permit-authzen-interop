@@ -7,6 +7,8 @@ To run this project locally:
 ```
 PERMIT_PDP_URL=<your_permit_pdp_address>
 PERMIT_API_KEY=<your_permit_api_key>
+PERMIT_IDP_PDP_URL=<your_idp_permit_pdp_address>
+PERMIT_IDP_API_KEY=<your_idp_permit_api_key>
 ```
 2. Install the dependencies:
 ```bash
@@ -17,7 +19,10 @@ npm install
 npm start
 ```
 
-This server will expose you a `POST` endpoint at `/access/v1/evaluation`, which is the main PDP endpoint for the AuthZen standard.
+This server exposes the following AuthZen-compliant endpoints:
+- `POST /access/v1/evaluation` - Single evaluation endpoint
+- `POST /access/v1/evaluations` - Bulk evaluation endpoint
+- `POST /access/v1/search/resource` - Resource search endpoint (uses IdP environment credentials)
 
 ## Testing
 To run the AuthZen interop tests, you have to configure your Permit account with the relevant data. You can do so by running the following command on a clean Permit environment (after installing the dependencies):
