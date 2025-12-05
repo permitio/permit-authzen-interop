@@ -183,6 +183,8 @@ fastify.post(
         }),
       });
 
+      console.log("Permissions", JSON.stringify(response));
+
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(`Failed to get user permissions: ${response.status} ${response.statusText} - ${errorText}`);
