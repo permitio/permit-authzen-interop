@@ -158,6 +158,9 @@ fastify.post(
         resourceType,
       });
 
+      console.log("Permit IDP PDP URL", process.env.PERMIT_IDP_PDP_URL);
+      console.log("Permit IDP API Key", process.env.PERMIT_IDP_API_KEY);
+
       // Call the raw user-permissions API endpoint
       // The API expects a User object with at least a 'key' field
       const response = await fetch(`${process.env.PERMIT_IDP_PDP_URL}/user-permissions`, {
